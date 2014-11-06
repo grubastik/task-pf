@@ -1,0 +1,12 @@
+<div>
+	<h2>Welcome!</h2>
+	<div class="posts_container" id="posts-container">
+		<?php foreach ($this->posts as $post) { ?>
+			<div id="post-container" class="post-container" data-id="<?php echo $this->escape($post->id)?>">
+				<div class="post-header"><h3><?php echo $this->escape($post->title)?>&nbsp;<small><?php echo date('d.m.Y @G:i', $post->created)?></small></h3></div>
+				<div class="post-body"><?php echo nl2br($this->escape($post->text))?></div>
+				<hr>
+			</div>
+		<?php } ?>
+	<div>
+</div>

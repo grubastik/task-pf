@@ -1,0 +1,16 @@
+<?= $this->doctype() ?>
+<html>
+<head>
+	<?= $this->headTitle('Pixelfield test project') ?>
+<?php if (Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'index') {?>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-git2.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+<?php } ?>
+	<?= $this->headMeta()->appendHttpEquiv('Content-Type','text/html; charset=UTF-8');?>
+</head>
+<body>
+	<div id="content">
+		<?=$this->layout()->content;?>
+	</div>
+</body>
+</html>
